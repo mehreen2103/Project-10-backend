@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report10" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bfccbf23-7aa8-4dd3-9f31-b186646fa188">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="SQL">
+		<![CDATA[select id , name , roll_no, physics,chemistry,maths, (maths + physics + chemistry)
+as total from st_marksheet where physics >= 33 and chemistry >= 33 and maths >= 33 order by total desc limit 0 , 10]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_marksheet"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_marksheet"/>
+	</field>
+	<field name="roll_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="roll_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_marksheet"/>
+	</field>
+	<field name="physics" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="physics"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_marksheet"/>
+	</field>
+	<field name="chemistry" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="chemistry"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_marksheet"/>
+	</field>
+	<field name="maths" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="maths"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="st_marksheet"/>
+	</field>
+	<field name="total" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="total"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="name">
+		<groupExpression><![CDATA[$F{name}]]></groupExpression>
+	</group>
+	<group name="roll_no">
+		<groupExpression><![CDATA[$F{roll_no}]]></groupExpression>
+	</group>
+	<group name="physics">
+		<groupExpression><![CDATA[$F{physics}]]></groupExpression>
+	</group>
+	<group name="chemistry">
+		<groupExpression><![CDATA[$F{chemistry}]]></groupExpression>
+	</group>
+	<group name="maths">
+		<groupExpression><![CDATA[$F{maths}]]></groupExpression>
+	</group>
+	<group name="total">
+		<groupExpression><![CDATA[$F{total}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="81" height="30" uuid="d53c445f-5c7d-412c-8183-919d1471fcc2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a7b877e4-7e00-4138-9e73-6c4ad2feb09a"/>
+				</reportElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="0" width="79" height="30" uuid="ea931fab-a9c1-4188-8716-77544e307a66">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="892d47b8-811e-4303-92ab-80165ff6b493"/>
+				</reportElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="79" height="30" uuid="f7f6a986-eaa2-47aa-87d5-e0de72a4f766">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ae60c19-a919-44df-8458-92a18e88cb9e"/>
+				</reportElement>
+				<text><![CDATA[roll_no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="0" width="79" height="30" uuid="da76de9a-c4af-4976-a681-35980d58fb09">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7b0cb825-7b30-4f8e-8aff-e61d0b59b5a7"/>
+				</reportElement>
+				<text><![CDATA[physics]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="79" height="30" uuid="79a839d8-565e-415d-8eb8-b74013862d0a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73ff981f-12ff-40a2-b9bd-5a7bf806296c"/>
+				</reportElement>
+				<text><![CDATA[chemistry]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="0" width="79" height="30" uuid="157470a3-6d7d-4fc5-b6e7-94a3714ead63">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7b466ae5-a642-4b06-9f2a-73a864de316f"/>
+				</reportElement>
+				<text><![CDATA[maths]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="79" height="30" uuid="4f61c6fb-44ec-415f-b8db-b301fdec5e64">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f8dd197b-3a3d-4ad6-81bd-9d74f9c2a62d"/>
+				</reportElement>
+				<text><![CDATA[total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="81" height="30" uuid="276f73d3-1362-4c1f-946c-70afdc7f82fb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a7b877e4-7e00-4138-9e73-6c4ad2feb09a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="0" width="79" height="30" uuid="82265c28-b374-4705-ab9c-cb54740f6d32">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="892d47b8-811e-4303-92ab-80165ff6b493"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="79" height="30" uuid="988ce334-e00d-4d55-b809-1fb1cbc0cae3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ae60c19-a919-44df-8458-92a18e88cb9e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{roll_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="0" width="79" height="30" uuid="06f78c39-863c-435d-ad69-7c4118e664fe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7b0cb825-7b30-4f8e-8aff-e61d0b59b5a7"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{physics}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="0" width="79" height="30" uuid="57a4c157-bcd1-4488-8733-a0a939ead2b4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73ff981f-12ff-40a2-b9bd-5a7bf806296c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{chemistry}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="0" width="79" height="30" uuid="818f7a07-1a36-4b12-b58a-2d72c1ece37e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7b466ae5-a642-4b06-9f2a-73a864de316f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{maths}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="79" height="30" uuid="9b4b6d2d-8e4f-4479-ab50-e42b3284dca4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f8dd197b-3a3d-4ad6-81bd-9d74f9c2a62d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
