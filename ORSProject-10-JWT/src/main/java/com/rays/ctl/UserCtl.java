@@ -136,6 +136,7 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 	 * @param file the profile picture file
 	 * @param req the HTTP servlet request
 	 * @return an {@link ORSResponse} containing the uploaded image ID
+	 * 
 	 */
 	@PostMapping("/profilePic/{userId}")
 	public ORSResponse uploadPic(@PathVariable Long userId, @RequestParam("file") MultipartFile file,

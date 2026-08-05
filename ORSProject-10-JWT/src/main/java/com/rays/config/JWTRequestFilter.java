@@ -80,6 +80,7 @@ public class JWTRequestFilter extends OncePerRequestFilter {
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             System.out.println("JWT Token ======>>>>> iiiiinnnnnn");
             String jwtToken = authorizationHeader.substring(7);
+            
             try {
                 String loginId = jwtUtil.extractLoginId(jwtToken);
                 if (!jwtUtil.validateToken(jwtToken, loginId)) {
@@ -100,6 +101,7 @@ public class JWTRequestFilter extends OncePerRequestFilter {
                 System.out.println("request filter: " + dto.getLoginId());
                 UserContext context = new UserContext(dto);
                 UserContextHolder.setContext(context);
+                
             } catch (Exception e) {
                 // Token is invalid or expired
                 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);

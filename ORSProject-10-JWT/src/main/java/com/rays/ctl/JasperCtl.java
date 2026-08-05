@@ -1,28 +1,23 @@
 package com.rays.ctl;
-
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.hibernate.Session;
 import org.hibernate.internal.SessionImpl;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.rays.common.BaseCtl;
 import com.rays.dto.MarksheetDTO;
 import com.rays.form.MarksheetForm;
 import com.rays.service.MarksheetServiceInt;
-
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperExportManager;
@@ -32,6 +27,7 @@ import net.sf.jasperreports.engine.JasperReport;
 
 /**
  * Jasper functionality Controller. Performs operation for Print pdf of
+ * 
  * MarksheetMeriteList
  *
  * 
@@ -39,7 +35,7 @@ import net.sf.jasperreports.engine.JasperReport;
 /**
  * The Class JasperCtl.
  *
- * @author saket
+ * @author mehreen
  */
 
 @RestController

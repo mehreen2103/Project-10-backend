@@ -101,4 +101,5 @@ public class UserDAOImpl extends BaseDAOImpl<UserDTO> implements UserDAOInt {
 		}
 		return whereCondition;
 	}
+	
 }

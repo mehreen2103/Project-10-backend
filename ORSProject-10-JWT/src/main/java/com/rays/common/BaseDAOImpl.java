@@ -175,7 +175,7 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 
 		List<Predicate> whereClause = getWhereClause(dto, builder, qRoot);
 
-		cq.where(whereClause.toArray(new Predicate[whereClause.size()]));
+		cq.where(whereClause.toArray(new Predicate[whereClause.size()])); //this line is not imp to tell sir
 
 		TypedQuery<T> query = entityManager.createQuery(cq);
 
