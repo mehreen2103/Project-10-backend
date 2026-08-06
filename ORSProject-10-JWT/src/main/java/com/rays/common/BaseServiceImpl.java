@@ -1,11 +1,8 @@
 package com.rays.common;
-
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.rays.exception.DatabaseException;
 import com.rays.exception.DuplicateRecordException;
 
@@ -37,6 +34,7 @@ public class BaseServiceImpl<T extends BaseDTO, D extends BaseDAOInt<T>> impleme
 	 */
 	@Transactional(readOnly = false)
 	public long add(T dto, UserContext userContext) throws DuplicateRecordException {
+		
 		long pk = baseDao.add(dto, userContext);
 		return pk;
 	}
@@ -71,7 +69,9 @@ public class BaseServiceImpl<T extends BaseDTO, D extends BaseDAOInt<T>> impleme
 	 */
 	@Transactional(propagation = Propagation.REQUIRED)
 	public long save(T dto, UserContext userContext) throws DuplicateRecordException {
+		
 		Long id = dto.getId();
+		
 		if (id != null && id > 0) {
 			update(dto, userContext);
 		} else {
@@ -89,6 +89,7 @@ public class BaseServiceImpl<T extends BaseDTO, D extends BaseDAOInt<T>> impleme
 	 */
 	@Transactional(readOnly = true)
 	public T findById(long id, UserContext userContext) {
+		
 		T dto = baseDao.findByPK(id, userContext);
 		return dto;
 	}
@@ -102,6 +103,7 @@ public class BaseServiceImpl<T extends BaseDTO, D extends BaseDAOInt<T>> impleme
 	 */
 	@Transactional(propagation = Propagation.REQUIRED)
 	public T delete(long id, UserContext userContext) {
+		
 		T dto = findById(id, userContext);
 		if (dto == null) {
 			throw new DatabaseException("Record not found");
