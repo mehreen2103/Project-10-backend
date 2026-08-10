@@ -22,8 +22,7 @@ public class CreditCardDAOImpl extends BaseDAOImpl<CreditCardDTO> implements Cre
 	}
 
 	@Override
-	protected List<Predicate> getWhereClause(CreditCardDTO dto, CriteriaBuilder builder,
-	        Root<CreditCardDTO> qRoot) {
+	protected List<Predicate> getWhereClause(CreditCardDTO dto, CriteriaBuilder builder, Root<CreditCardDTO> qRoot) {
 
 	    List<Predicate> whereCondition = new ArrayList<>();
 
