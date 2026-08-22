@@ -1,8 +1,6 @@
 package com.rays.common;
-
 import org.springframework.dao.DataAccessException;
 import org.hibernate.exception.JDBCConnectionException;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.CannotCreateTransactionException;

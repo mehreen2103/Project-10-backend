@@ -212,7 +212,9 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 	 * @return merit list records
 	 */
 	public List marksheetMeritList(String hql, UserContext userContext) {
+		
 		Query q = entityManager.createQuery(hql);
+		
 		q.setFirstResult(0);
 		q.setMaxResults(10);
 		List l = q.getResultList();

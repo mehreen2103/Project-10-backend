@@ -1,5 +1,5 @@
 package com.rays.common;
-import java.util.List;
+import java.util.List;  
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -74,6 +74,7 @@ public class BaseServiceImpl<T extends BaseDTO, D extends BaseDAOInt<T>> impleme
 		
 		if (id != null && id > 0) {
 			update(dto, userContext);
+			
 		} else {
 			id = add(dto, userContext);
 		}
